@@ -1,23 +1,42 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Fichiers générés par l'environnement de développement
+node_modules/
+build/
+dist/
+coverage/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Fichiers de configuration spécifiques à l'utilisateur
+.env
 
-# testing
-/coverage
+# Fichiers d'éditeur spécifiques
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# production
-/build
+# Fichiers de logs et fichiers temporaires
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# misc
-.DS_Store
-.env.local
+# Fichiers d'application spécifiques
+*.env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Dossiers de sauvegarde et fichiers de sauvegarde
+__pycache__/
+*.py[cod]
+*.bak
+*.swp
+
+# Fichiers d'images
+*.jpeg
+*.jpg
+*.png
+*.gif
+
+# Fichiers de sauvegarde de système d'exploitation
+.DS_Store
+Thumbs.db
