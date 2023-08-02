@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.scss';
+
 import RoutesComponent from './routes'; // Assurez-vous d'avoir le bon chemin vers le fichier routes.js
 import reportWebVitals from './reportWebVitals';
 
