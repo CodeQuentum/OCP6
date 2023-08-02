@@ -1,12 +1,15 @@
 // Header.js
 import React from 'react';
 import '../styles/Header.scss';
+import logo from "../assets/logo-kasa.png";
+
 
 const Header = () => {
   return (
     <header>
       <div className="logo">
-      <img src="../assets/logo-kasa.png" alt="Logo Kasa" />
+      <img src={logo} alt="Logo Kasa" />
+
       </div>
       <nav>
         <ul>

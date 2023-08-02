@@ -1,14 +1,16 @@
 // pages/Home.js
 import React from 'react';
 import Header from '../components/Header';
+import imgAccueil from '../assets/img-accueil.png';
+import "../styles/Home.scss";
 
 const Home = () => {
   return (
     <div>
       <Header />
       <main> {}
-        <h1>Bienvenue sur Kasa !</h1>
-        <p>Explorez notre sélection d'appartements pour trouver votre séjour idéal.</p>
+        <h1>Chez vous, partout et ailleurs</h1>
+        <img src={imgAccueil} alt="Falaise en bord de mer"></img>
         {/* Ajoutez d'autres éléments de contenu pour la page d'accueil */}
       </main> {}
     </div>
