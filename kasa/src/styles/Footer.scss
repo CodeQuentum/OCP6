@@ -1,0 +1,28 @@
+/* styles/Footer.scss */
+.footer {
+    background-color: black; /* Fond noir pour le footer */
+    color: white; /* Couleur du texte du footer */
+    padding: 20px; /* Ajoute un peu d'espace intérieur pour le contenu du footer */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  /* Ajoute ce style à l'élément html pour étendre la hauteur sur toute la fenêtre */
+  html {
+    position: relative;
+    min-height: 100vh; /* Ajuste la hauteur pour que le contenu s'étende sur toute la fenêtre */
+    margin: 0; /* Supprime les marges par défaut */
+  }
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-content img{
+    object-fit: cover;
+    width: 122px;
+    height: 39.44px;
+  }

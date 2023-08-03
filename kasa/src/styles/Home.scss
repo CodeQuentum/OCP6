@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+main {
+    position: relative;
+}
+
 main img {
-    width: 1240px;
+    display: block; /* Pour que la marge automatique fonctionne */
+    margin: 0 auto; /* Appliquer une marge automatique horizontale pour centrer */
+    width: 1240px; /* Taille de l'image */
     height: 223px;
     border-radius: 20px;
     object-fit: cover;
 }
 
-main {
-    position: relative;
-}
-
 main h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 2rem;
-    text-shadow: 2px, 2px, 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
