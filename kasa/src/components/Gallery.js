@@ -1,6 +1,6 @@
-// Gallery.js
+// components/Gallery.js
 import React from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import '../styles/Gallery.scss';
 import apptData from '../data/appartement.json';
 
@@ -10,7 +10,7 @@ const Gallery = () => {
       <div className="gallery">
         {apptData.map((item) => (
           <div key={item.id} className="gallery-item">
-            <Link to={`../pages/Appartement.js${item.id}`}>
+            <Link to={`/appartements/${item.id}`}>
               <img src={item.cover} alt={item.title} />
             </Link>
             <p className="image-title">{item.title}</p>

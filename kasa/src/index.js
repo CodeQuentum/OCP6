@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
-
-import RoutesComponent from './routes'; // Assurez-vous d'avoir le bon chemin vers le fichier routes.js
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import RoutesComponent from './routes'; 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <RoutesComponent /> {/* Utilisez directement le composant RoutesComponent ici */}
+    <RoutesComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );

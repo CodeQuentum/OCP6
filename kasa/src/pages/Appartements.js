@@ -1,18 +1,65 @@
+// pages/Appartements.js
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import Slider from 'react-slick';
+import apptData from '../data/appartement.json';
+import '../styles/Appartements.scss';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-const Appartements = ({ data }) => {
+const Appartements = () => {
+  const { id } = useParams();
+  const appartement = apptData.find((appartement) => appartement.id === id);
+
+  if (!appartement) {
+    return <div>Appartement non trouvé</div>;
+  }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div>
-      <h2>Liste des appartements :</h2>
-      <ul>
-        {data.map((appartement) => (
-          <li key={appartement.id}>
-            <h3>{appartement.nom}</h3>
-            <p>{appartement.description}</p>
-            {/* Ajoutez d'autres informations sur l'appartement ici */}
-          </li>
+      <Header />
+      <Slider {...settings}>
+        {appartement.pictures.map((picture, index) => (
+          <div key={index}>
+            <img className="slider-image" src={picture} alt={`Picture ${index + 1}`} />
+          </div>
         ))}
-      </ul>
+      </Slider>
+      <div>
+        <h2>{appartement.title}</h2>
+        <p>{appartement.description}</p>
+        <p>Location: {appartement.location}</p>
+        <p>Rating: {appartement.rating}</p>
+
+        <h3>Host</h3>
+        <div>
+          <p>{appartement.host.name}</p>
+          <img src={appartement.host.picture} alt={appartement.host.name} />
+        </div>
+
+        <h3>Equipements</h3>
+        <ul>
+          {appartement.equipments.map((equipment, index) => (
+            <li key={index}>{equipment}</li>
+          ))}
+        </ul>
+
+        <h3>Tags</h3>
+        <ul>
+          {appartement.tags.map((tag, index) => (
+            <li key={index}>{tag}</li>
+          ))}
+        </ul>
+      </div>
+      <Footer />
     </div>
   );
 };
