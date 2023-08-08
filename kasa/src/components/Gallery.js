@@ -13,7 +13,7 @@ const Gallery = () => {
             <Link to={`/appartements/${item.id}`}>
               <img src={item.cover} alt={item.title} />
             </Link>
-            <p className="image-title">{item.title}</p>
+            <p className="appt-title">{item.title}</p>
           </div>
         ))}
       </div>
