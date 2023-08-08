@@ -1,4 +1,3 @@
-// components/Gallery.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Gallery.scss';
@@ -11,9 +10,13 @@ const Gallery = () => {
         {apptData.map((item) => (
           <div key={item.id} className="gallery-item">
             <Link to={`/appartements/${item.id}`}>
-              <img src={item.cover} alt={item.title} />
+              <div className="img-wrapper">
+                <div className="appt-overlay"></div>
+                <div className="overlay-dark"></div>
+                <img src={item.cover} alt={item.title} className="overlay-image" />
+                <p className="appt-title">{item.title}</p>
+              </div>
             </Link>
-            <p className="appt-title">{item.title}</p>
           </div>
         ))}
       </div>
