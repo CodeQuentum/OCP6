@@ -4,7 +4,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #white;
+  }
   
     .logo img {
       width: 100px; /* Ajustez la taille du logo en fonction de vos besoins */
@@ -16,7 +17,7 @@ header {
     
     nav ul li {
       display: inline-block;
-      margin-left: 20px;
+      margin-left: 20px; 
     }
   
     nav ul li:first-child {
@@ -25,8 +26,8 @@ header {
   
     nav ul li a {
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
+      color: #FF6060;
+      font-weight: 500;
+      font-size: 24px;
+      font-style: "Montserrat";
     }
-  }
-  
