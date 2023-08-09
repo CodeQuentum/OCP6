@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <main> {} 
+      <main className='homeMain'> {} 
         <div className='img-wrapper'>
           <div className='overlay'></div>
           <img src={imgAccueil} alt="Falaise en bord de mer"></img>

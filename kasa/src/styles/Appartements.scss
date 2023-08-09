@@ -1,9 +1,86 @@
 // styles/Appartements.scss
+.apptMain{
+  position: relative;
+}
+.apptContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
 .slider-image {
     object-fit: cover;
     width: 1240px;
     height: 415px;
-    top: 163px;
-    left: 100px;
+    display: block; 
+    margin: 0 auto;
   }
-  
+  .slider-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.tags-rate{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title-host{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title-loc{
+  display: flex;
+  flex-direction: column;
+  font-family: "montserrat";
+  color: #FF6060;
+}
+.loc{
+  font-size: 18px;
+  font-weight: 500;
+}
+.host{
+  display: flex;
+  flex-direction: row;
+  font-family: "montserrat";
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+}
+.description-equipement{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 150px;
+  justify-content: space-between;
+  font-family: "montserrat";
+  color: #FF6060;
+}
+.hostpict{
+  border-radius: 50%;
+}
+.tags{
+  list-style: none;
+  display: flex; 
+  padding: 0; 
+}
+.tags li{
+  margin-right: 10px;
+  border: solid 1px;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #FF6060;
+  font-family: "montserrat";
+  font-weight: 500;
+  color: white;
+}
+.rating-stars{
+ color: #FF6060;
+}
+.star-icon {
+  font-size: 24px; /* Ajustez la taille selon vos préférences */
+  margin-right: 8px; /* Ajoutez un espace entre les étoiles */
+  margin-top: 8px;
+}

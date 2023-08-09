@@ -31,12 +31,6 @@ __pycache__/
 *.bak
 *.swp
 
-# Fichiers d'images
-*.jpeg
-*.jpg
-*.png
-*.gif
-
 # Fichiers de sauvegarde de système d'exploitation
 .DS_Store
 Thumbs.db

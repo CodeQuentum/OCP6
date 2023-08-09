@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-main {
+.homeMain {
     position: relative;
 }
 
-main img {
+.homeMain img {
     display: block; /* Pour que la marge automatique fonctionne */
     margin: 0 auto; /* Appliquer une marge automatique horizontale pour centrer */
     width: 1240px; /* Taille de l'image */

@@ -4,11 +4,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #white;
+    background-color: #ffffff;
+    max-width: 1240px;
+    margin: 0 auto;
   }
   
     .logo img {
-      width: 100px; /* Ajustez la taille du logo en fonction de vos besoins */
+      width: 100px;
     }
   
     nav ul {
