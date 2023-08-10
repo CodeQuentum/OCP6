@@ -1,0 +1,54 @@
+.aboutMain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .aboutMain img {
+    display: block;
+    margin: 0 auto;
+    width: 1240px;
+    height: 223px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  .menuDeroulant {
+    font-family: "montserrat";
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 1040px;
+  }
+  
+  .menuDeroulant h2 {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #FF6060;
+    color: #ffffff;
+    border: solid 1px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .menuDeroulant p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 10px;
+
+    max-height: 500px; 
+  }
+  
+  .menuDeroulant.open p {
+    max-height: 1000px; /* Ajustez la hauteur maximale selon vos besoins */
+  }
+  .arrow {
+    display: inline-block;
+    transition: transform 0.6s ease;
+  }
+  
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+  
