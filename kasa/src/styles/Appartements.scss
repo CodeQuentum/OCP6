@@ -52,14 +52,32 @@
 }
 .description-equipement{
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
+  margin: 0 auto;
   margin-bottom: 150px;
   justify-content: space-between;
   font-family: "montserrat";
+}
+.description-equipement h3{
+  display: flex;
+  background-color: #FF6060;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 560px;
+  margin-bottom: 0px;
+  justify-content: space-between;
+}
+.description-equipement p{
   color: #FF6060;
+  background-color: #f0f0f2;
+  width: 560px;
 }
 .hostpict{
   border-radius: 50%;
+}
+li{
+  list-style: none
 }
 .tags{
   list-style: none;
@@ -80,7 +98,7 @@
  color: #FF6060;
 }
 .star-icon {
-  font-size: 24px; /* Ajustez la taille selon vos préférences */
-  margin-right: 8px; /* Ajoutez un espace entre les étoiles */
+  font-size: 24px;
+  margin-right: 8px;
   margin-top: 8px;
 }
