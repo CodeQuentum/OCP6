@@ -12,7 +12,7 @@ const NotFound = () => {
       <Header /> 
       <section className='errorContent'>
       <img className='img404' src={error404} alt='Erreur 404' />
-      <p>Oups! La page que vous demandez n'existe pas.</p>
+      <p>Oups! La page que <span>vous demandez n'existe pas.</span></p>
       <Link to="/">Retourner à la page d'accueil</Link>
       </section>
       <Footer /> 

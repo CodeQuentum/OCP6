@@ -22,6 +22,7 @@
   margin: 0 auto;
   margin-bottom: 10px;
   width: 1040px;
+  z-index: 100;
 }
 
 .menuDeroulant h2 {
@@ -61,4 +62,20 @@
 
 .arrow.open {
   transform: rotate(180deg);
+}
+@media (max-width: 768px){
+  .aboutMain img {
+    width: 21rem;/*336px*/
+    height: 13.938rem;/*223px*/
+    object-fit: cover;
+  }
+  .menuDeroulant {
+   width: 20.938rem;/*335*/
+  }
+  .menuDeroulant h2 {
+    width: 19.688rem;/*315px*/
+  }
+  .topic{
+    margin-bottom:11rem;/*176px*/
+  }
 }

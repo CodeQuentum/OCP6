@@ -48,6 +48,7 @@ const About = () => {
       <Header />
       <main className="aboutMain">
         <img src={imgAPropos} alt="Lac bordée de montagne." />
+        <section className='topic'>
         {sections.map((section, index) => (
           <Section
             key={index}
@@ -56,7 +57,8 @@ const About = () => {
             isOpen={openSections[index]}
             onClick={() => handleSectionClick(index)}
           />
-        ))}
+        ))} 
+        </section>
       </main>
       <Footer />
     </div>

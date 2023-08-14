@@ -22,3 +22,24 @@
     line-height: 1.625rem; /* Correspond à 26px */
     color: #FF6060;
 }
+@media (max-width: 768px){
+    .errorContent {
+        margin-top: 7.5rem;/*120px*/
+        margin-left: auto;
+        margin-right: auto;
+        width:20.938rem ;
+        gap: 5rem; /* Correspond à 80px */
+    }
+    .errorContent img{
+        object-fit: contain;
+        width: 12.5rem;
+        height: 6.25rem;
+    }
+    .errorContent p {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.125rem; /* Correspond à 18px */
+        line-height: 1.604rem; /* Correspond à 25.67px */
+    }
+}
