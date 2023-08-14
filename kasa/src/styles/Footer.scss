@@ -1,28 +1,43 @@
-/* styles/Footer.scss */
+/* Footer.scss */
 .footer {
-    background-color: black; /* Fond noir pour le footer */
-    color: white; /* Couleur du texte du footer */
-    padding: 20px; /* Ajoute un peu d'espace intérieur pour le contenu du footer */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+html {
+  position: relative;
+  min-height: 100vh; 
+  margin: 0;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content img {
+  object-fit: cover;
+  width: 12.2rem;
+  height: 3.944rem;
+}
+@media (max-width: 768px){
+  .footer-content img {
+    width: 7.625rem; /*122px*/
+    height: 2.465rem;/*39.44px*/
   }
-  
-  /* Ajoute ce style à l'élément html pour étendre la hauteur sur toute la fenêtre */
-  html {
-    position: relative;
-    min-height: 100vh; /* Ajuste la hauteur pour que le contenu s'étende sur toute la fenêtre */
-    margin: 0; /* Supprime les marges par défaut */
-  }
-  .footer-content{
+  .footer-content p{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    font-size: 0.75rem;
   }
-  .footer-content img{
-    object-fit: cover;
-    width: 122px;
-    height: 39.44px;
+  .footer-content {
+    padding-top: 1.563rem; /*25px*/
+    padding-bottom: 1.563;
   }
+}

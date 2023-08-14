@@ -1,37 +1,37 @@
-// styles/Gallery.scss
 .gallery-wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 20px; 
-  }
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 60px;
-    margin-bottom: 190px;
-    background-color: #F6F6F6;
-    padding: 50px;
-    border-radius: 25px;
-  }
-  
-  .gallery-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-  }
-  
-  .gallery-item img {
-    object-fit: cover;
-    width: 340px;
-    height: 340px;
-    border-radius: 20px;
-  }
-  
-  .img-wrapper {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  width: 77.5rem;
+  padding: 1.25rem; /* Correspond à 20px */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3.75rem; /* Correspond à 60px */
+  margin-bottom: 11.875rem; /* Correspond à 190px */
+  background-color: #F6F6F6;
+  padding: 3.125rem; /* Correspond à 50px */
+  border-radius: 1.5625rem; /* Correspond à 25px */
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-item img {
+  object-fit: cover;
+  width: 21.25rem; /* Correspond à 340px */
+  height: 21.25rem; /* Correspond à 340px */
+  border-radius: 1.25rem; /* Correspond à 20px */
+}
+
+.img-wrapper {
+  position: relative;
+  border-radius: 1.25rem; /* Correspond à 20px */
+  overflow: hidden;
 }
 
 .appt-overlay {
@@ -43,23 +43,43 @@
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
   pointer-events: none;
 }
+
 .overlay-image {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .appt-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translate(20px, -20px);
-    color: white;
-    font-family: "Montserrat";
-    font-size: 16px;
-    font-weight: 500;
-    text-align: left;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(1.25rem, -1.25rem); /* Correspond à 20px */
+  color: white;
+  font-family: "Montserrat";
+  font-size: 1rem; /* Correspond à 16px */
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5); /* Correspond à 2px 2px 4px */
 }
-
-  
+@media (max-width: 768px){
+  .gallery-wrapper {
+    width: 20.938rem;/* Correspond à 335px */
+    padding: 0.625rem; /* Correspond à 10px */
+  }
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.650rem; /* Correspond à 10px */
+    margin-bottom: 11.875rem; /* Correspond à 190px */
+    background-color: #ffffff;
+    padding: 0rem;
+  }
+  .gallery-item img {
+    width: 20.938rem; /* Correspond à 335px */
+    height: 20.938rem; /* Correspond à 335px */
+    border-radius: 1.25rem; /* Correspond à 20px */
+  }
+  .appt-title {
+    font-size: 0.7rem; /* Correspond à 11.2px */
+}
+}

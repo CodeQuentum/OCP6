@@ -14,7 +14,7 @@ const Home = () => {
         <div className='img-wrapper'>
           <div className='overlay'></div>
           <img src={imgAccueil} alt="Falaise en bord de mer"></img>
-          <h1 className ="image-title">Chez vous, partout et ailleurs</h1>
+          <h1 className ="image-title">Chez vous,<span> partout et ailleurs</span></h1>
         </div>
       </main> {}
       <Gallery />

@@ -1,24 +1,24 @@
 .errorContent {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 5rem; /* Correspond à 80px */
 }
 
-.errorContent p{
+.errorContent p {
     font-family: Montserrat;
-    font-size: 36px;
+    font-size: 2.25rem; /* Correspond à 36px */
     font-weight: 500;
-    line-height: 51px;
+    line-height: 3rem; /* Correspond à 51px */
     color: #FF6060;
 }
 
-.errorContent a{
+.errorContent a {
     text-decoration: none;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 1.125rem; /* Correspond à 18px */
     font-weight: 500;
-    line-height: 26px;
+    line-height: 1.625rem; /* Correspond à 26px */
     color: #FF6060;
 }
