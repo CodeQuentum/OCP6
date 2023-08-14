@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/About.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import imgAPropos from "../assets/img-apropos.png";
 
 const Section = ({ title, content, isOpen, onClick }) => {
   return (
     <div className="menuDeroulant">
       <h2 onClick={onClick}>
-        {title} <span className={`arrow ${isOpen ? 'open' : ''}`}>&#x25B2;</span>
+        {title}       <span className={`arrow ${isOpen ? 'open' : ''}`}>
+        <FontAwesomeIcon icon={faChevronUp} />
+      </span>
       </h2>
       <p className={`content ${isOpen ? 'open' : ''}`}>{content}</p>
     </div>
