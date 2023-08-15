@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import apptData from '../data/appartement.json';
@@ -55,46 +56,56 @@ const Appartements = () => {
             ))}
           </Slider>
           <div className='apptTxt'>
+            <div className='detail'>
             <div className='title-host'>
               <div className='title-loc'>
                 <h2>{appartement.title}</h2>
                 <p>Location: {appartement.location}</p>
               </div>
-              <div className='host'>
-                <p>{appartement.host.name}</p>
-                <img className='hostpict' src={appartement.host.picture} alt={appartement.host.name} />
-              </div>
-            </div>
-            <div className='tags-rate'>
               <ul className='tags'>
                 {appartement.tags.map((tag, index) => (
                   <li key={index}>{tag}</li>
                 ))}
               </ul>
+            </div>
+            <div className='tags-rate'>
+            <div className='host'>
+                <p>{appartement.host.name}</p>
+                <img className='hostpict' src={appartement.host.picture} alt={appartement.host.name} />
+              </div>
               <div className="rating-stars">
                 {generateStars(appartement.rating)}
               </div>
             </div>
-            <div className='description-equipement'>
-              <div className='description-menu'>
-                <h3 onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}>
-                  Description
-                  <span className={`arrow ${isDescriptionOpen ? 'open' : ''}`}>&#x25B2;</span>
-                </h3>
-                <p className={`content ${isDescriptionOpen ? 'open' : ''}`}>{appartement.description}</p>
-              </div>
-              <div className='equipement-menu'>
-                <h3 onClick={() => setIsEquipmentsOpen(!isEquipmentsOpen)}>
-                  Equipements
-                  <span className={`arrow ${isEquipmentsOpen ? 'open' : ''}`}>&#x25B2;</span>
-                </h3>
-                <ul className={`content ${isEquipmentsOpen ? 'open' : ''}`}>
-                  {appartement.equipments.map((equipment, index) => (
-                    <li key={index}>{equipment}</li>
-                  ))}
-                </ul>
-              </div>
             </div>
+            <div className='description-equipement'>
+            <div className='description-menu'>
+              <h3 onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}>
+                Description
+                <FontAwesomeIcon
+                  icon={faChevronUp}
+                  className={`arrow ${isDescriptionOpen ? 'open' : ''}`}
+                />
+              </h3>
+              <p className={`content ${isDescriptionOpen ? 'open' : ''}`}>
+                {appartement.description}
+              </p>
+            </div>
+            <div className='equipement-menu'>
+              <h3 onClick={() => setIsEquipmentsOpen(!isEquipmentsOpen)}>
+                Equipements
+                <FontAwesomeIcon
+                  icon={faChevronUp}
+                  className={`arrow ${isEquipmentsOpen ? 'open' : ''}`}
+                />
+              </h3>
+              <ul className={`content ${isEquipmentsOpen ? 'open' : ''}`}>
+                {appartement.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
           </div>
         </section>
       </main>
