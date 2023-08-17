@@ -9,6 +9,7 @@ import apptData from '../data/appartement.json';
 import '../styles/Appartements.scss';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import NotFound from '../pages/NotFound';
 
 const Appartements = () => {
   const { id } = useParams();
@@ -18,7 +19,7 @@ const Appartements = () => {
   const [isEquipmentsOpen, setIsEquipmentsOpen] = useState(false);
 
   if (!appartement) {
-    return <div>Appartement non trouvé</div>;
+    return <NotFound />;
   }
 
   const settings = {
