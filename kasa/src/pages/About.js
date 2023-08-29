@@ -1,23 +1,9 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Collapse from '../components/Collapse'; // Assure-toi d'ajuster le chemin si nécessaire
 import '../styles/About.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import imgAPropos from "../assets/img-apropos.png";
-
-const Section = ({ title, content, isOpen, onClick }) => {
-  return (
-    <div className="menuDeroulant">
-      <h2 onClick={onClick}>
-        {title}       <span className={`arrow ${isOpen ? 'open' : ''}`}>
-        <FontAwesomeIcon icon={faChevronUp} />
-      </span>
-      </h2>
-      <p className={`content ${isOpen ? 'open' : ''}`}>{content}</p>
-    </div>
-  );
-};
 
 const About = () => {
   const sections = [
@@ -54,13 +40,14 @@ const About = () => {
         <img src={imgAPropos} alt="Lac bordée de montagne." />
         <section className='topic'>
         {sections.map((section, index) => (
-          <Section
+          <Collapse
             key={index}
             title={section.title}
-            content={section.content}
             isOpen={openSections[index]}
             onClick={() => handleSectionClick(index)}
-          />
+          >
+            {section.content}
+          </Collapse>
         ))} 
         </section>
       </main>
