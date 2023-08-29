@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import apptData from '../data/appartement.json';
 import '../styles/Appartements.scss';
+import '../styles/Collapse.scss';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NotFound from '../pages/NotFound';
+import Collapse from '../components/Collapse'; 
 
 const Appartements = () => {
   const { id } = useParams();
   const appartement = apptData.find((appartement) => appartement.id === id);
-
-  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
-  const [isEquipmentsOpen, setIsEquipmentsOpen] = useState(false);
 
   if (!appartement) {
     return <NotFound />;
@@ -80,33 +77,17 @@ const Appartements = () => {
             </div>
             </div>
             <div className='description-equipement'>
-            <div className='description-menu'>
-              <h3 onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}>
-                Description
-                <FontAwesomeIcon
-                  icon={faChevronUp}
-                  className={`arrow ${isDescriptionOpen ? 'open' : ''}`}
-                />
-              </h3>
-              <p className={`content ${isDescriptionOpen ? 'open' : ''}`}>
-                {appartement.description}
-              </p>
+              <Collapse title="Description" >
+                <p>{appartement.description}</p>
+              </Collapse>
+              <Collapse title="Equipements">
+                <ul>
+                  {appartement.equipments.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                  ))}
+                </ul>
+              </Collapse>
             </div>
-            <div className='equipement-menu'>
-              <h3 onClick={() => setIsEquipmentsOpen(!isEquipmentsOpen)}>
-                Equipements
-                <FontAwesomeIcon
-                  icon={faChevronUp}
-                  className={`arrow ${isEquipmentsOpen ? 'open' : ''}`}
-                />
-              </h3>
-              <ul className={`content ${isEquipmentsOpen ? 'open' : ''}`}>
-                {appartement.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
           </div>
         </section>
       </main>

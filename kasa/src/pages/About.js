@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Collapse from '../components/Collapse'; // Assure-toi d'ajuster le chemin si nécessaire
+import Collapse from '../components/Collapse';
+import '../styles/Collapse.scss';
 import '../styles/About.scss';
 import imgAPropos from "../assets/img-apropos.png";
 
