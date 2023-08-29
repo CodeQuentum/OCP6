@@ -64,7 +64,7 @@
   justify-content: space-between;
   font-family: "montserrat";
 }
-.description-equipement h3{
+.description-equipement .collapsible h3{
   display: flex;
   background-color: #FF6060;
   color: #ffffff;
@@ -74,10 +74,13 @@
   margin-bottom: 0px;
   justify-content: space-between;
 }
-.description-equipement p{
+.description-equipement .collapsible .content{
   color: #FF6060;
   background-color: #f0f0f2;
   width: 560px;
+}
+.description-equipement .collapsible .content ul{
+  padding: 0;
 }
 .hostpict{
   border-radius: 50%;
@@ -112,6 +115,9 @@ li{
   .apptContent {
     max-width: 23.438rem;
   }
+  .apptMain{
+    margin-bottom: 2rem;
+  }
   .slider-image {
     width: 20.938rem;/*335px*/
     height: 15.938rem;/*255px*/
@@ -129,12 +135,12 @@ li{
     flex-direction: column; 
     margin-bottom: 150px;
   }
-  .description-equipement h3{
+  .description-equipement .collapsible h3{
     width: 20.938rem;/*335px*/
     font-size: 0.813rem;/*13px*/
     justify-content: space-between;
   }
-  .description-equipement p{
+  .description-equipement .collapsible .content{
     width: 20.938rem;/*335px*/
     font-size: 0.813rem;
   }
